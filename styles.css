@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+*{margin:0; padding: 0; box-sizing: border-box;}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    background-image: url("./images/bg-pattern.svg");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: hsl(230, 100%, 99%);
+}
+header{
+    height: 14em;
+    width: fit-content;
+    background-image: url("./images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: hsl(225, 20%, 60%);
+}
+/*common classes*/
+.blue-title{
+    color: hsl(227, 35%, 25%);
+}
+.spaced{
+    padding: 0.5em 0;
+}
+.spaced2{
+    margin: 2em 0;
+}
+.flex-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-centered{
+    text-align: center;
+    line-height: 1.6em;
+}
+.secondary-text{
+    font-size: 0.85em;
+    color: hsl(225, 20%, 60%);
+}
+/*common classes*/
+
+/*card component*/
+.top-part{
+    width: 100%;
+    padding: 2em 2em 0 2em;
+    text-align: center;
+}
+.card{
+    background-color: #fff;
+    border-radius: 0.5em;
+    width: 75%;
+    max-width: 600px;
+    min-width: 340px;
+    box-shadow:  0px 15px 25px rgba(149, 157, 165, 0.2);
+}
+
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 0.5em;
+    background: hsl(224, 65%, 95%);
+    background-size: 10%;
+    background-image: linear-gradient(hsl(174, 77%, 80%), hsl(174, 77%, 80%));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+
+.slider::-webkit-slider-thumb{
+box-shadow: 1px 10px 15px hsl(174, 86%, 70%);
+width: 2.5em;
+height: 2.5em;
+border-radius: 50px;
+background: hsl(174, 86%, 45%);
+background-image: url("./images/icon-slider.svg");
+background-repeat: no-repeat;
+background-position: center;
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+.slider::-moz-range-thumb {
+    box-shadow: 1px 10px 15px hsl(174, 86%, 70%);
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50px;
+    background: hsl(174, 86%, 45%);
+    background-image: url("./images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    }
+.slider::-webkit-slider-thumb:hover{
+    background-color: hsl(174, 86%, 40%);
+}
+.price{
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+/*toggler*/
+.toggler-control input{
+    visibility: hidden;
+}
+.toggler-control{
+    cursor: pointer;
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: hsl(223, 50%, 87%);
+}
+.toggler-circle{
+    position: absolute;
+    top:3px; left:3px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+/*discount*/
+.yearly-billing{
+    position: relative;
+}
+.discount-percentage{
+    display: inline;
+    position: absolute;
+    width: fit-content;
+    padding: 0 5px;
+    background-color: hsl(14, 92%, 95%);
+    border-radius: 25px;
+    color: hsl(15, 100%, 70%);
+    font-size: .8em;
+    margin-left: 5px;
+    font-weight: 800;
+}
+.discount-word{
+    display: none;
+}
+
+/*footer*/
+.information {
+    width: 100%;
+    left:0;
+    bottom: 0;
+    padding: 1.5em 0;
+    border-top: 1px solid hsl(224, 65%, 95%);
+    text-align: center;
+}
+.button{
+    padding: 1em 2.5em;
+    border: none;
+    border-radius:25px;
+    background-color:hsl(227, 35%, 25%);
+    color: hsl(230, 100%, 99%);
+    font-weight: 500;
+    cursor: pointer;
+}
+@media screen and (min-width:700px) {
+
+    .top-part{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap:wrap;
+        text-align: center;
+    }
+    .half-sized{
+        flex-basis: 50%;
+    }
+    .pageviews{
+        width: 50%;
+        order: 1;
+    }
+    .price-plan{
+        order:2;
+        width: 50%;
+    }
+    .slider{
+        flex-basis: 100%;
+        order:3;
+    }
+    .discount-selector{
+        width: 100%;
+        order:3;
+    }
+    .discount-word{
+        display: inline;
+    }
+    .button{
+        padding: 1em 4em;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

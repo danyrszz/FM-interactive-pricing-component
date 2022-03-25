@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="wrapper flex-centered">
+    <header class="header flex-centered">
+      <h2 class="spaced blue-title">
+      Simple, traffic-based pricing
+      </h2>
+      <p class="text-centered">Sign-up for our 30-day trial. <br>No credit card required.</p>
+    </header>
+
+    <main class="card flex-centered">
+      <section class="top-part">
+          <h3 class="spaced pageviews secondary-text half-sized">PAGEVIEWS</h3>
+          <input type="range" class="slider spaced2" min="1" max="100" value="50">
+          <p class="price-plan half-sized blue-title">
+            <span class="price">$8.00</span>
+            <span class="secondary-text month">/ month</span>
+          </p>
+
+        <p class="secondary-text spaced2 discount-selector">
+          Monthly Billing
+          <label class="toggler-control">
+            <input type="checkbox" id="toggler">
+            <span class="toggler-circle"></span>
+          </label>
+          <span class="yearly-billing">
+            Yearly Billing 
+          </span>
+          <span class="discount-percentage">-25%<span class="discount-word"> discount</span> </span>
+          
+        </p>
+      </section>
+
+      <footer class="information flex-centered top-part">
+        <aside class="pageviews">
+          <p class="secondary-text spaced">
+            <span><img src="./images/icon-check.svg" alt=""></span>
+            <span>Unlimited websites</span>
+          </p>
+  
+          <p class="secondary-text spaced">
+            <span><img src="./images/icon-check.svg" alt=""></span>
+            <span>100% data ownership</span>
+          </p>
+  
+          <p class="secondary-text spaced">
+            <span><img src="./images/icon-check.svg" alt=""></span>
+            <span>Email reports</span>
+          </p>
+        </aside>
+
+        <aside class="price-plan">
+          <button class="spaced2 button">
+            Start my trial
+          </button>
+        </aside>
+      </footer>
+
+    </main>
+
+    <div class="attribution spaced">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://twitter.com/danyrszz">Daniel Sánchez</a>.
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
